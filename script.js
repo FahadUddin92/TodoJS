@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var count=localStorage.length;// get count
 	var data = new Array();	
@@ -14,6 +13,7 @@ $(document).ready(function(){
 		}
 	$(".data").keypress(function(e){
 		if(e.which == 13) {
+		if($("input").val()!==""){
 			console.log("pressed");
 		data.push($('.data').val());
 		localStorage.setItem("todo"+(localStorage.length+1),$('.data').val());
@@ -26,9 +26,12 @@ $(document).ready(function(){
 			i++;
 		}
 		$("input").val("");
-		}		
+		}	
+		}
+			
     });
     $(".submit").click(function(){
+		if($("input").val()!==""){
 		data.push($('.data').val());
 		localStorage.setItem("todo"+(localStorage.length+1),$('.data').val());
 		count++;
@@ -41,6 +44,7 @@ $(document).ready(function(){
 			i++;
 		}
 		$("input").val("");
+		}
 		
     });
     $(".container").on("click", ".todoremove", function(){
