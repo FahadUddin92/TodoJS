@@ -30,6 +30,7 @@ $(document).ready(function(){
 		var i=0;
 		//$(".todorow").addClass("hide");
 		$(".todorow").remove();
+		//$(".data").html("");
 		
 		while (i<localStorage.length) {
 			var value = "<div class='todorow'><div id="+localStorage.key(i)+" class='todoitem'>"+data[i]+"</div><div class='todoremove'>X</div></div>";
@@ -37,7 +38,10 @@ $(document).ready(function(){
 			//console.log(data[i]);
 			i++;
 		}
+		$("input").val("");
 		}
+		//$('input').attr('value')= '';
+		
     });
     $(".submit").click(function(){
 		//count++;		
@@ -47,6 +51,8 @@ $(document).ready(function(){
 		var i=0;
 		//$(".todorow").addClass("hide");
 		$(".todorow").remove();
+		//$(".data").html("");
+		
 		
 		while (i<localStorage.length) {
 			var value = "<div class='todorow'><div id="+localStorage.key(i)+" class='todoitem'>"+data[i]+"</div><div class='todoremove'>X</div></div>";
@@ -54,6 +60,8 @@ $(document).ready(function(){
 			//console.log(data[i]);
 			i++;
 		}
+		//$('input').attr('value')= '';
+		$("input").val("");
 		
     });
 	/*
